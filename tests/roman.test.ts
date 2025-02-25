@@ -1,8 +1,14 @@
 import { convertRomanStringToDecimalNumber } from '../src/roman'
 
 describe('ConvertRomanStringToDecimalNumber', () => {
-  it('should return -1 when cannot convert string', () => {
+  it('should return -1 when cannot input string is invalid', () => {
     const inputRomanStringValue = 'A'
+    const expectedDecimalValue = -1
+    expect(convertRomanStringToDecimalNumber(inputRomanStringValue)).toBe(expectedDecimalValue)
+  })
+
+  it('should return -1 when cannot string is empty', () => {
+    const inputRomanStringValue = ''
     const expectedDecimalValue = -1
     expect(convertRomanStringToDecimalNumber(inputRomanStringValue)).toBe(expectedDecimalValue)
   })
@@ -88,6 +94,60 @@ describe('ConvertRomanStringToDecimalNumber', () => {
   it('should convert string "XVI" to number 16 correctly', () => {
     const inputRomanStringValue = 'XVI'
     const expectedDecimalValue = 16
+    expect(convertRomanStringToDecimalNumber(inputRomanStringValue)).toBe(expectedDecimalValue)
+  })
+
+  it('should convert string "L" to number 50 correctly', () => {
+    const inputRomanStringValue = 'L'
+    const expectedDecimalValue = 50
+    expect(convertRomanStringToDecimalNumber(inputRomanStringValue)).toBe(expectedDecimalValue)
+  })
+
+  it('should convert string "C" to number 100 correctly', () => {
+    const inputRomanStringValue = 'C'
+    const expectedDecimalValue = 100
+    expect(convertRomanStringToDecimalNumber(inputRomanStringValue)).toBe(expectedDecimalValue)
+  })
+
+  it('should convert string "D" to number 500 correctly', () => {
+    const inputRomanStringValue = 'D'
+    const expectedDecimalValue = 500
+    expect(convertRomanStringToDecimalNumber(inputRomanStringValue)).toBe(expectedDecimalValue)
+  })
+
+  it('should convert string "M" to number 1000 correctly', () => {
+    const inputRomanStringValue = 'M'
+    const expectedDecimalValue = 1000
+    expect(convertRomanStringToDecimalNumber(inputRomanStringValue)).toBe(expectedDecimalValue)
+  })
+
+  it('should convert string "MM" to number 2000 correctly', () => {
+    const inputRomanStringValue = 'MM'
+    const expectedDecimalValue = 2000
+    expect(convertRomanStringToDecimalNumber(inputRomanStringValue)).toBe(expectedDecimalValue)
+  })
+
+  it('should convert string "MMM" to number 3000 correctly', () => {
+    const inputRomanStringValue = 'MMM'
+    const expectedDecimalValue = 3000
+    expect(convertRomanStringToDecimalNumber(inputRomanStringValue)).toBe(expectedDecimalValue)
+  })
+
+  it('should convert string "MMMCMXCIX" to number 3999 correctly', () => {
+    const inputRomanStringValue = 'MMMCMXCIX'
+    const expectedDecimalValue = 3999
+    expect(convertRomanStringToDecimalNumber(inputRomanStringValue)).toBe(expectedDecimalValue)
+  })
+
+  it('should convert string "MCMXLIV" to number 1944 correctly', () => {
+    const inputRomanStringValue = 'MCMXLIV'
+    const expectedDecimalValue = 1944
+    expect(convertRomanStringToDecimalNumber(inputRomanStringValue)).toBe(expectedDecimalValue)
+  })
+
+  it('should convert string "XLII" to number 42 correctly', () => {
+    const inputRomanStringValue = 'XLII'
+    const expectedDecimalValue = 42
     expect(convertRomanStringToDecimalNumber(inputRomanStringValue)).toBe(expectedDecimalValue)
   })
 })
