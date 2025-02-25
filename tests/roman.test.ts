@@ -12,4 +12,16 @@ describe('ConvertRomanStringToDecimalNumber', () => {
     const expectedDecimalValue = 1
     expect(convertRomanStringToDecimalNumber(inputRomanStringValue)).toBe(expectedDecimalValue)
   })
+
+  it('should convert string "II" to number 2 correctly', () => {
+    const inputRomanStringValue = 'II'
+    const expectedDecimalValue = 2
+    expect(convertRomanStringToDecimalNumber(inputRomanStringValue)).toBe(expectedDecimalValue)
+  })
+
+  it('should convert string "III" to number 3 correctly', () => {
+    const inputRomanStringValue = 'III'
+    const expectedDecimalValue = 3
+    expect(convertRomanStringToDecimalNumber(inputRomanStringValue)).toBe(expectedDecimalValue)
+  })
 })
