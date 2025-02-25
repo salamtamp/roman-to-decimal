@@ -54,4 +54,40 @@ describe('ConvertRomanStringToDecimalNumber', () => {
     const expectedDecimalValue = 8
     expect(convertRomanStringToDecimalNumber(inputRomanStringValue)).toBe(expectedDecimalValue)
   })
+
+  it('should convert string "IX" to number 9 correctly', () => {
+    const inputRomanStringValue = 'IX'
+    const expectedDecimalValue = 9
+    expect(convertRomanStringToDecimalNumber(inputRomanStringValue)).toBe(expectedDecimalValue)
+  })
+
+  it('should convert string "X" to number 10 correctly', () => {
+    const inputRomanStringValue = 'X'
+    const expectedDecimalValue = 10
+    expect(convertRomanStringToDecimalNumber(inputRomanStringValue)).toBe(expectedDecimalValue)
+  })
+
+  it('should convert string "XI" to number 11 correctly', () => {
+    const inputRomanStringValue = 'XI'
+    const expectedDecimalValue = 11
+    expect(convertRomanStringToDecimalNumber(inputRomanStringValue)).toBe(expectedDecimalValue)
+  })
+
+  it('should convert string "XIV" to number 14 correctly', () => {
+    const inputRomanStringValue = 'XIV'
+    const expectedDecimalValue = 14
+    expect(convertRomanStringToDecimalNumber(inputRomanStringValue)).toBe(expectedDecimalValue)
+  })
+
+  it('should convert string "XV" to number 15 correctly', () => {
+    const inputRomanStringValue = 'XV'
+    const expectedDecimalValue = 15
+    expect(convertRomanStringToDecimalNumber(inputRomanStringValue)).toBe(expectedDecimalValue)
+  })
+
+  it('should convert string "XVI" to number 16 correctly', () => {
+    const inputRomanStringValue = 'XVI'
+    const expectedDecimalValue = 16
+    expect(convertRomanStringToDecimalNumber(inputRomanStringValue)).toBe(expectedDecimalValue)
+  })
 })
