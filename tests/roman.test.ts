@@ -36,4 +36,22 @@ describe('ConvertRomanStringToDecimalNumber', () => {
     const expectedDecimalValue = 5
     expect(convertRomanStringToDecimalNumber(inputRomanStringValue)).toBe(expectedDecimalValue)
   })
+
+  it('should convert string "VI" to number 6 correctly', () => {
+    const inputRomanStringValue = 'VI'
+    const expectedDecimalValue = 6
+    expect(convertRomanStringToDecimalNumber(inputRomanStringValue)).toBe(expectedDecimalValue)
+  })
+
+  it('should convert string "VII" to number 7 correctly', () => {
+    const inputRomanStringValue = 'VII'
+    const expectedDecimalValue = 7
+    expect(convertRomanStringToDecimalNumber(inputRomanStringValue)).toBe(expectedDecimalValue)
+  })
+
+  it('should convert string "VIII" to number 8 correctly', () => {
+    const inputRomanStringValue = 'VIII'
+    const expectedDecimalValue = 8
+    expect(convertRomanStringToDecimalNumber(inputRomanStringValue)).toBe(expectedDecimalValue)
+  })
 })
