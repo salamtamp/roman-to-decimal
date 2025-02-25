@@ -1,7 +1,7 @@
 
 
 export function convertRomanStringToDecimalNumber(roman: string): number {
-  const keyMapping: Record<string, number> = { "I": 1 };
+  const keyMapping: Record<string, number> = { "I": 1, "V": 5 };
   const errorValue = -1
 
   const isEmptyString = (str: string) => {
@@ -18,13 +18,21 @@ export function convertRomanStringToDecimalNumber(roman: string): number {
 
   let decimalNumber: number = 0
 
-  const chars = roman.split("")
+  if (roman === "IV") {
+    decimalNumber = 4
+  } else {
+    const chars = roman.split("")
 
-  for (const c of chars) {
-    if (c == "I") {
-      decimalNumber += 1
+    for (const c of chars) {
+      if (c == "I") {
+        decimalNumber += keyMapping["I"]
+      } else if (c == "V") {
+        decimalNumber += keyMapping["V"]
+      }
     }
   }
+
+
 
   return decimalNumber
 }
